@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="script.js"></script>
+    <script defer src="search.js"></script>
+    <script defer src="drag.js"></script>
+    <script defer src="data.js"></script>
+    <script src="modal.js" defer></script>
+    <script src="load.js" defer></script>
+    <title>Restraunt App</title>
+</head>
+<body >
+    
+    <div id ="major">
+
+        <div class="tables-container sides">        
+            <div class="table-heading heading">Table</div>
+            <div class="table-search " ><input id="searchTable" onkeyup="tableSearch()" style="min-width: 10%;" type="text" placeholder="Search Table" value=""></div>
+            <div id='allTables'></div>
+        </div>
+    
+        <div class="menu-container sides">     
+            <div class="menu-heading heading">Menu</div>
+            <div class="menu-search "  ><input id="searchMenu" onkeyup="searchItems()"  style="min-width: 60%;" type="text"  placeholder="Search Menu.. by course, by food" ></div>
+            <div id="totalMenu"></div>      
+        </div>            
+        
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="container">
+            <div id="mHeader">
+                <span class="close">&times; </span>
+                <h3 id="Tab"></h3>
+            </div>
+            <div id="mBody">
+                <table id="mTable">
+                    <tr>
+                        <th>S.No </th>
+                        <th> Item </th>
+                        <th> Price </th>
+                        <th> Quantity </th>
+                    </tr>
+                </table>
+                <h3 id="TB"> </h3>
+
+                <button id="GenerateBill">Generate Bill</button>
+                <br>
+            </div>                 
+        </div>      
+    </div>
+
+
+    <div id="GModal" class="GModal">
+        <div class="GBContainer">
+            <div id="GHeader">
+                <span class="close1">&times; </span>
+                <h3 id="tno" style="display: inline"> </h3>
+                <h3 style="display: inline"> || Pay The Bill </h3>
+            </div>
+            <div id="Gbody">
+                <h3 id="Tbill"></h3>
+            </div>
+        </div>
+    </div>
+<div id="overlay"></div>
+        
+
+    
+
+</body>
+</html>
